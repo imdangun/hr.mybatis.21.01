@@ -25,16 +25,16 @@ public class EmployeeServiceImpl implements EmployeeService {
 	
 	@Override
 	public boolean addEmployee(String empName, LocalDate hireDate) {
-		return empDao.insertEmployee(empName, hireDate) > 0;
+		return empDao.insertEmployee(empName, hireDate);
 	}
 	
 	@Override
 	public boolean fixEmployee(Employee emp) {
-		return empDao.updateEmployee(emp) > 0;
+		return empDao.updateEmployee(emp);
 	}
 	
 	@Override
 	public boolean delEmployee(int empId) {
-		return empDao.deleteEmployee(empId) > 0;
+		return empDao.deleteEmployee(empId);
 	}
 }

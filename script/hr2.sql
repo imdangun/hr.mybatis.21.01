@@ -1,3 +1,5 @@
+-- sqlplus -s system/oracle < hr2.sql
+
 drop user hr2 cascade;
 
 create user hr2 identified by hr2 default tablespace users;

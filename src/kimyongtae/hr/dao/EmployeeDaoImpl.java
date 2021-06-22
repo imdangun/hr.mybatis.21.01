@@ -25,17 +25,17 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	}
 	
 	@Override
-	public int insertEmployee(String empName, LocalDate hireDate) {
-		return empMap.insertEmployee(empName, hireDate);
+	public boolean insertEmployee(String empName, LocalDate hireDate) {
+		return empMap.insertEmployee(empName, hireDate) > 0;
 	}
 	
 	@Override
-	public int updateEmployee(Employee emp) {
-		return empMap.updateEmployee(emp);
+	public boolean updateEmployee(Employee emp) {
+		return empMap.updateEmployee(emp) > 0;
 	}
 	
 	@Override
-	public int deleteEmployee(int empId) {
-		return empMap.deleteEmployee(empId);
+	public boolean deleteEmployee(int empId) {
+		return empMap.deleteEmployee(empId) > 0;
 	}
 }
