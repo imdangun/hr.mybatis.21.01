@@ -1,28 +1,21 @@
 <?xml version='1.0' encoding='utf-8' ?>
-<!DOCTYPE configuration PUBLIC './/mybatis.org//DTD config 3.0//EN' 
+<!DOCTYPE configuration PUBLIC './/mybatis.org//DTD config 3.0//EN'
 	'http://mybatis.org/dtd/mybatis-3-config.dtd'>
 <configuration>
-	<properties resource='kimyongtae/hr/config/jdbc.properties'>
-		<property name='driver' value='oracle.jdbc.driver.OracleDriver'/>
-	</properties>
+	<properties resource='kimyongtae/hr/config/jdbc.properties'/>
 	
-	<settings>
-		<setting name='cacheEnabled' value='false'/>
-		<setting name='localCacheScope' value='STATEMENT'/>	
-	</settings>
-	
-	<typeAliases>		
+	<typeAliases>
 		<package name='kimyongtae.hr.domain'/>
 	</typeAliases>
 	
 	<environments default='hr2'>
 		<environment id='hr2'>
 			<transactionManager type='JDBC'/>
-			<dataSource type='POOLED'>   
-			 	<property name='driver' value='${driver}'/>
-			 	<property name='url' value='${url}'/>
-			 	<property name='username' value='${username}'/>
-			 	<property name='password' value='${password}'/>
+			<dataSource type='POOLED'>
+				<property name='driver' value='${driver}'/>
+				<property name='url' value='${url}'/>
+				<property name='username' value='${username}'/>
+				<property name='password' value='${password}'/>
 			</dataSource>
 		</environment>
 	</environments>
